@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="registroNotas.RegistroAlumno"
+             NavigationPage.HasNavigationBar = "false">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" Spacing="10">
+                <Label Text="Registro de Nota"
+                        Font="24"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" FontAttributes="Bold"/>
+
+                <Label Text="Desarrollo de Aplicaion Academica" Font="10"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Entry x:Name="entNombres" Placeholder="Nombres"/>
+                <Entry x:Name="entApellidos" Placeholder="Apellidos"/>
+                <Entry x:Name="entNota" Placeholder="Nota" Keyboard="Numeric"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha Publicacion" VerticalOptions="Center"/>
+                    <DatePicker x:Name="dtpFechaPublicacion"/>
+                    <Label Text="Estado" VerticalOptions="Center"/>
+                    <Switch x:Name="SwEstado" VerticalOptions="Center" IsToggled="True"/>
+                </StackLayout>
+
+                <Button x:Name="btnAgregar" Text="Agregar"
+                        HorizontalOptions="Center" BackgroundColor="Green"
+                        TextColor="Black"/>
+
+                <ListView x:Name="lvLista" BackgroundColor="LightGray" IsPullToRefreshEnabled = "True"
+            RefreshCommand = "{Binding RefreshCommand}"
+            IsRefreshing = "{Binding IsRefreshing}"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

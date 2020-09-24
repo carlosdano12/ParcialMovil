@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="registroNotas.EditarAlumno">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Editar Nota" Font="24"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        TextColor="Black" FontAttributes="Bold"/>
+
+                <Label Text="Desarrollo de aplicaciones Empresariales" Font="10"
+                       HorizontalOptions="Center"
+                       TextColor="Black" VerticalOptions="Center"/>
+
+                <Entry x:Name="entNombres" Placeholder="Nombres"/>
+                <Entry x:Name="entApellidos" Placeholder="Apellidos"/>
+                <Entry x:Name="entNota" Placeholder="Nota" Keyboard="Numeric"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha de publicacion:" VerticalOptions="Center"/>
+                    <DatePicker x:Name="dtpFechaPublicacion"/>
+                    <Label Text="Estado" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                           TextColor="Black"/>
+                    <Switch x:Name="SwEstado" HorizontalOptions="End" VerticalOptions="Center"
+                            IsToggled="True"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="btnActualizar" Text="Actualizar"
+                            HorizontalOptions="Center" BackgroundColor="Green"
+                            TextColor="Black"/>
+                    <Button x:Name="btnBorrar" Text="Borrar"
+                            HorizontalOptions="Center"
+                            BackgroundColor="Green" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

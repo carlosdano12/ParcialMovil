@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="registroNotas.SingUp">
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <Grid
+        
+        
+        RowSpacing="0"
+        ColumnSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+
+        <BoxView 
+            Grid.Row="0"
+            BackgroundColor="#8E3277" />
+
+        <Image
+            Grid.Row="0"
+            Source="brand_logo.png"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="100"
+            WidthRequest="100" />
+
+        <Label 
+            Grid.Row="1"
+            Text="SIGN UP"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <StackLayout                
+            Grid.Row="2"
+            VerticalOptions="Fill"
+            HorizontalOptions="Center"
+            Spacing="15">
+
+            <StackLayout HorizontalOptions="Center" Spacing="1">
+                <Label 
+                    Text="Email:" />
+                <Entry 
+                     x:Name="txtCorreo"
+                    Keyboard="Email"
+                    WidthRequest="300" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Spacing="1">
+                <Label 
+                    Text="Nombre:" />
+                <Entry 
+                     x:Name="txtNombre"
+                    Keyboard="Default"
+                    WidthRequest="300" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Spacing="1">
+                <Label 
+                    Text="Apellido:" />
+                <Entry 
+                     x:Name="txtApellido"
+                    Keyboard="Default"
+                    WidthRequest="300" />
+            </StackLayout>
+
+
+            <StackLayout HorizontalOptions="Center" Spacing="1">
+                <Label 
+                    Text="Password:" />
+                <Entry 
+                    x:Name="txtConstraseña"
+                    WidthRequest="300"
+                    IsPassword="True" />
+            </StackLayout>
+
+            <Button Margin="0,10,0,0" Text="Registrar"
+                        x:Name="resgistro"
+                        BackgroundColor="#A94991"
+                        TextColor="White" Clicked="resgistro_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+        </ScrollView>
+</ContentPage>
